@@ -3,15 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Colored Timetable</title>
     <style>
-        td{
-            text-align: center;
+        table {
+            border-collapse: collapse;
+            width: 100%;
         }
+        th, td {
+            text-align: center;
+            border: 2px solid brown;
+            padding: 8px;
+        }
+
+        /* Header Row (Periods) */
+        th {
+            background-color: #ffe4b5; /* Light orange for top headers */
+        }
+
+        /* Day column */
+        .day {
+            background-color: #e0f7fa; /* Light cyan */
+            font-weight: bold;
+        }
+
+        /* Time row */
+        .time {
+            background-color: #fff9c4; /* Light yellow */
+            font-weight: bold;
+        }
+
+        /* Subject colors */
+        .dsa { background-color: #f28b82; }    /* Red shade */
+        .fsd { background-color: #fbbc04; }    /* Yellow shade */
+        .dbms { background-color: #34a853; color: white; } /* Green */
+        .daa { background-color: #4285f4; color: white; }  /* Blue */
+        .aosc { background-color: #9c27b0; color: white; } /* Purple */
+        .oosd { background-color: #ff7043; color: white; } /* Orange */
+
+        /* Breaks */
+        .break { background-color: #d3d3d3; }  /* Grey */
+        .lunch { background-color: #a1887f; color: white; } /* Brownish */
     </style>
 </head>
 <body>
-    <table border="2" style ="border: 2px solid brown;">
+    <table>
         <tr>
             <th rowspan="2">Day/Time</th>
             <th>1</th>
@@ -25,7 +60,7 @@
             <th>7</th>
             <th>8</th>
         </tr>
-        <tr>
+        <tr class="time">
             <td>8:50-9:40</td>
             <td>9:40-10:30</td>
             <td>10:30-10:40</td>
@@ -38,55 +73,51 @@
             <td>3:40-4:30</td>
         </tr>
         <tr>
-            <td>Monday</td>
-            <td colspan="2">DSA</td>
-            <td rowspan="5">BREAK</td>
-            <td colspan="2">FSD</td>
-            <td>DBMS</td>
-            <td rowspan="5">LUNCH</td>
-            <td>DAA</td>
-            <td>AOSC</td>
-            <td>OOSD</td>
+            <td class="day">Monday</td>
+            <td colspan="2" class="dsa">DSA</td>
+            <td rowspan="5" class="break">BREAK</td>
+            <td colspan="2" class="fsd">FSD</td>
+            <td class="dbms">DBMS</td>
+            <td rowspan="5" class="lunch">LUNCH</td>
+            <td class="daa">DAA</td>
+            <td class="aosc">AOSC</td>
+            <td class="oosd">OOSD</td>
         </tr>
         <tr>
-             <td>Tuesday</td>
-            <td>DSA</td>
-            <td>FSD</td>
-            <td colspan="3">DBMS</td>
-            
-            <td>DAA</td>
-            <td>AOSC</td>
-            <td>OOSD</td>
+            <td class="day">Tuesday</td>
+            <td class="dsa">DSA</td>
+            <td class="fsd">FSD</td>
+            <td colspan="3" class="dbms">DBMS</td>
+            <td class="daa">DAA</td>
+            <td class="aosc">AOSC</td>
+            <td class="oosd">OOSD</td>
         </tr>
-         <tr>
-            <td>Wednesday</td>
-            <td colspan="2">DSA</td>
-            <td colspan="2">FSD</td>
-            <td>DBMS</td>
-           
-            <td>DAA</td>
-            <td>AOSC</td>
-            <td>OOSD</td>
+        <tr>
+            <td class="day">Wednesday</td>
+            <td colspan="2" class="dsa">DSA</td>
+            <td colspan="2" class="fsd">FSD</td>
+            <td class="dbms">DBMS</td>
+            <td class="daa">DAA</td>
+            <td class="aosc">AOSC</td>
+            <td class="oosd">OOSD</td>
         </tr>
-         <tr>
-             <td>Thursday</td>
-            <td>DSA</td>
-            <td>FSD</td>
-            <td colspan="3">DBMS</td>
-            
-            <td>DAA</td>
-            <td>AOSC</td>
-            <td>OOSD</td>
+        <tr>
+            <td class="day">Thursday</td>
+            <td class="dsa">DSA</td>
+            <td class="fsd">FSD</td>
+            <td colspan="3" class="dbms">DBMS</td>
+            <td class="daa">DAA</td>
+            <td class="aosc">AOSC</td>
+            <td class="oosd">OOSD</td>
         </tr>
-         <tr>
-            <td>Friday</td>
-            <td colspan="2">DSA</td>
-            <td colspan="2">FSD</td>
-            <td>DBMS</td>
-            
-            <td>DAA</td>
-            <td>AOSC</td>
-            <td>OOSD</td>
+        <tr>
+            <td class="day">Friday</td>
+            <td colspan="2" class="dsa">DSA</td>
+            <td colspan="2" class="fsd">FSD</td>
+            <td class="dbms">DBMS</td>
+            <td class="daa">DAA</td>
+            <td class="aosc">AOSC</td>
+            <td class="oosd">OOSD</td>
         </tr>
     </table>
 </body>
